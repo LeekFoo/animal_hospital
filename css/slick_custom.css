@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+.slick-dotted.slick-slider {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.slick-next:before, .slick-prev:before {
+    font-size: 30px;
+    color: #fff;
+}
+
+.slick-prev {
+    left: 25px;
+    z-index: 1;
+}
+
+.slick-next {
+    right: 25px;
+    z-index: 1;
+}
+
+.slick-dots {
+    position: initial;
+}
+
+.slick-dots li {
+    width: 90px;
+}
+
+@media screen and (max-width: 767px) {
+    .slick-prev {
+        left: 15px;
+    }
+    
+    .slick-next {
+        right: 15px;
+    }
+    
+    ul.slick-dots {
+        display: flex;
+    }
+
+}

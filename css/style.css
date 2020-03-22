@@ -1,0 +1,1162 @@
+@charset "utf-8";
+
+/***************************************
+                共通
+***************************************/
+body {
+    font-family: 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Sans', 'ヒラギノ角ゴシック', YuGothic, 'Yu Gothic', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+    color: #603913;
+    background-color: #fffdf9;
+    background-image: url(../img/back.png);
+    border-top: 4px solid #b58868;
+}
+
+::selection {
+    background: #b58868;
+    color: #fff;
+}
+
+::-moz-selection {
+    background: #b58868;
+    color: #fff;
+}
+
+section {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+a {
+    color: #603913;
+}
+
+a:hover {
+    color: #e9890c;
+}
+
+a img:hover {
+    opacity: .8;
+}
+
+img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+}
+
+i {
+    margin-right: 5px;
+}
+
+caption {
+    color: #603913;
+}
+
+.top-btn a {
+    position: fixed;
+    bottom: 35px;
+    right: 25px;
+    background-color: #b58868;
+    padding: 18px 10px;
+    border-radius: 50%;
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    opacity: .9;
+}
+
+.top-btn a:hover {
+    background-color: #f6b34a;
+    transition: .3s;
+}
+
+.top-btn a i {
+    margin-right: 0;
+}
+
+h2.fancy {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h2.fancy::before {
+    color: #ffa61a;
+    font-family: 'Font Awesome 5 Free';
+    content: '\f1b0';
+    font-weight: 900;
+    font-size: 80%;
+    margin-right: 1rem;
+    display: inline-block;
+    transform: rotate(-15deg);
+}
+
+h2.fancy::after {
+    color: #ffa61a;
+    font-family: 'Font Awesome 5 Free';
+    content: '\f1b0';
+    font-weight: 900;
+    font-size: 80%;
+    margin-left: 1rem;
+    display: inline-block;
+    transform: rotate(15deg);
+}
+
+h3.fancy {
+    font-size: 1.5rem;
+    /*    background-color: #e6ddd2;*/
+    border-bottom: 1px solid;
+    padding: 8px;
+    margin-bottom: 20px;
+}
+
+h3.fancy::before {
+    color: #603913;
+    font-family: 'Font Awesome 5 Free';
+    content: '\f1b0';
+    font-weight: 900;
+    font-size: 80%;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* Bootstrapのガター幅を調整するための汎用CSS */
+.row-0 {
+    margin-left: 0px;
+    margin-right: 0px
+}
+
+.row-0 > div {
+    padding-right: 0px;
+    padding-left: 0px
+}
+
+.row-10 {
+    margin-left: -5px;
+    margin-right: -5px
+}
+
+.row-10 > div {
+    padding-right: 5px;
+    padding-left: 5px
+}
+
+.row-20 {
+    margin-left: -10px;
+    margin-right: -10px
+}
+
+.row-20 > div {
+    padding-right: 10px;
+    padding-left: 10px
+}
+
+.row-30 {
+    margin-left: -15px;
+    margin-right: -15px
+}
+
+.row-30 > div {
+    padding-right: 15px;
+    padding-left: 15px
+}
+
+.row-40 {
+    margin-left: -20px;
+    margin-right: -20px
+}
+
+.row-40 > div {
+    padding-right: 20px;
+    padding-left: 20px
+}
+
+.row-50 {
+    margin-left: -25px;
+    margin-right: -25px
+}
+
+.row-50 > div {
+    padding-right: 25px;
+    padding-left: 25px
+}
+
+/***************************************
+                ヘッダ
+***************************************/
+header {
+    width: 100%;
+    background-color: #fff;
+    margin-top: 25px;
+}
+
+header .header-inner {
+    padding: 10px 0;
+}
+
+.header-inner h1 a {
+    display: flex;
+    width: 100%;
+}
+
+.header-inner h1 a img {
+    object-fit: contain;
+}
+
+header h1 {
+    max-width: 250px;
+    margin-bottom: 0;
+}
+
+header .right-header {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-end;
+    align-self: center;
+    width: 100%;
+}
+
+header .header-info .tel {
+    margin-top: 5px;
+}
+
+header .header-info .tel a {
+    display: inline-block;
+    height: 100%;
+}
+
+header .header-info .tel img {
+    max-height: 30px;
+    width: auto;
+}
+
+header .head-fb-link {
+    color: #fbb03b;
+    font-size: 1.5rem;
+}
+
+.gloval-nav {
+    width: 90%;
+}
+
+.gloval-nav li {
+    margin-right: 1%;
+}
+
+.gloval-nav li img {
+    /*    max-width: 80px;*/
+}
+
+.logo-img {
+    max-width: none;
+    width: inherit;
+}
+
+header.fix-nav {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    margin-top: 0;
+}
+
+header.fix-nav h1 {
+    width: 110px;
+}
+
+header.fix-nav ul {
+    margin-bottom: 0;
+}
+
+header.fix-nav .header-info {
+    display: none;
+}
+
+header .fb-logo {
+    max-width: 30px;
+}
+
+
+/***************************************
+        メインビジュアル(TOP)
+***************************************/
+.top-slider-wrapper {
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
+
+.slide-obj img {
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+}
+
+.catch {
+    position: relative;
+    background-image: url(../img/catch01.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.catch p {
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    font-size: 18px;
+    writing-mode: tb-rl;
+    height: 70%;
+}
+
+/***************************************
+            院長の想い(TOP)
+***************************************/
+.doctor-voice {
+    padding: 20px !important;
+    background-color: #eee;
+}
+
+.image-by-link {
+    list-style: circle;
+    margin-top: 15px;
+    padding-left: 40px;
+}
+
+/***************************************
+            ポイント(TOP)
+***************************************/
+.point {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: #e0ceb6;
+}
+
+.point .point-title {
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.point .point-text {
+    line-height: 2.3;
+}
+
+.point .point-description {
+    padding: 15px;
+}
+
+/***************************************
+            診療案内(TOP)
+***************************************/
+
+.treatment .point {
+    padding: 0 15px;
+    outline: 1px dashed #fff;
+    outline-offset: -5px;
+    background-color: #cadecf;
+}
+
+.treatment .point-img {
+    width: 60%;
+    margin: 15px auto;
+}
+
+/***************************************
+            SNS画像リスト(TOP)
+***************************************/
+.info-sec .container {
+    border-top: 4px solid #b58868;
+    border-bottom: 2px solid #b58868;
+    background-color: #fff;
+    padding: 20px;
+    padding-bottom: 35px;
+    background-image: url(../img/back_foot.png);
+    background-repeat-y: no-repeat;
+    background-position-y: bottom;
+}
+
+.sns-img {
+    margin-bottom: 10px;
+}
+
+.sns-img-list .card {
+    height: 100%;
+    border: none;
+}
+
+.sns-img-list .card .card-img-overlay {
+    display: none;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: .25rem;
+}
+
+.sns-img-list .card .card-title {
+    font-weight: 600;
+    font-size: 80%;
+}
+
+.sns-img-list .card .card-img {
+    object-fit: cover;
+    height: 100%;
+}
+
+.sns-img-list .sns-img .card a {
+    height: 100%;
+    color: #fff;
+}
+
+.sns-img-list .sns-img .card .card-text {
+    font-size: 80%;
+    overflow: hidden;
+    white-space: nowrap;
+    -webkit-text-overflow: ellipsis;
+     -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+
+/***************************************
+            お知らせ(TOP)
+***************************************/
+.info-area {
+/*
+    border-top: 4px solid #b58868;
+    border-bottom: 2px solid #b58868;
+    background-color: #fff;
+    padding: 20px;
+    padding-bottom: 35px;
+    background-image: url(../img/back_foot.png);
+    background-repeat-y: no-repeat;
+    background-position-y: bottom;
+*/
+}
+
+.info-area ul li {
+    margin-bottom: 7px;
+    padding: 5px 10px;
+    border-bottom: 1px dotted #84513d;
+}
+
+.info-area ul li:last-child {
+    border-bottom: none;
+}
+
+.info-area .date {
+    margin-right: 1rem;
+    color: #b58868;
+    letter-spacing: 0.05em;
+}
+
+.info-area .info-title {
+    font-weight: bold;
+}
+
+.info-area .info-desc {
+    display: inline-block;
+    padding-left: 1rem;
+    margin-top: 3px;
+    font-size: 80%;
+}
+
+/***************************************
+            アクセス(フッタ共通)
+***************************************/
+.access-sec {
+    background-color: #fff;
+}
+
+.access-sec h2 {
+    font-weight: bold;
+}
+
+.access-sec .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.access .row {
+    height: 100%;
+}
+
+.access .hospital-info {
+    padding: 20px;
+}
+
+.access .hospital-info .tel a {
+    display: inline-block;
+    height: 100%;
+}
+
+.access .hospital-info .tel img {
+    width: 75%;
+}
+
+.access .hospital-info .time table {
+    width: 100%;
+}
+
+.access .hospital-info .time table tr {
+    border-bottom: 1px solid;
+}
+
+.access .hospital-info .time table tr:last-child {
+    border-bottom: none;
+}
+
+.access .hospital-info .time table tr:not(:first-child) th {
+    font-weight: inherit;
+}
+
+.access .hospital-info .time table tr th:first-child {
+    border-right: 1px solid;
+}
+
+.access .hospital-info .time table tr th:not(:first-child),
+.access .hospital-info .time table tr td {
+    padding: 3% 1%;
+}
+
+.access .hospital-info .time table i.fa-paw {
+    color: #b58868;
+}
+
+.access .map {
+    min-height: 240px;
+}
+
+/***************************************
+                フッタ
+***************************************/
+footer {
+    display: flex;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #b58868;
+    color: #fff;
+}
+
+/***************************************
+        ハンバーガーメニュー(SP)
+***************************************/
+.global-nav {
+    position: fixed;
+    right: -100%;
+    top: 0;
+    width: 80%;
+    min-width: 300px;
+    height: 100vh;
+    padding-top: 40px;
+    background-color: #fff;
+    transition: all .6s;
+    z-index: 200;
+    overflow-y: auto;
+}
+
+.hamburger {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    z-index: 300;
+    background-color: beige;
+}
+
+.global-nav__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.global-nav__item {
+    text-align: center;
+    padding: 0 14px;
+}
+
+.global-nav__item a {
+    display: block;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    text-decoration: none;
+    color: inherit;
+}
+
+.global-nav__item a:hover {
+    background-color: rgba(181, 136, 104, .6);
+    color: #fff;
+}
+
+.hamburger__line {
+    position: absolute;
+    left: 11px;
+    width: 35px;
+    height: 2px;
+    background-color: #b58868;
+    transition: all .6s;
+}
+
+.hamburger__line--1 {
+    top: 17px;
+}
+
+.hamburger__line--2 {
+    top: 30px;
+}
+
+.hamburger__line--3 {
+    top: 43px;
+}
+
+.black-bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background-color: #b58868;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .6s;
+    cursor: pointer;
+}
+
+.global-nav .hospital-info {
+    margin-bottom: 15px;
+}
+
+.global-nav h2 {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.global-nav h2 a {
+    color: #603913;
+    font-size: 78%;
+    font-weight: bold;
+}
+
+.global-nav h2 a img {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.global-nav .tel {
+    text-align: center;
+    font-size: 15px;
+    margin-top: 15px;
+}
+
+.global-nav .tel a {
+    display: inline-block;
+    color: inherit;
+    width: 60%;
+}
+
+.global-nav .tel img {}
+
+/* 表示された時用のCSS */
+.nav-open .global-nav {
+    right: 0;
+}
+
+.nav-open .black-bg {
+    opacity: .8;
+    visibility: visible;
+}
+
+.nav-open .hamburger__line--1 {
+    transform: rotate(45deg);
+    top: 20px;
+}
+
+.nav-open .hamburger__line--2 {
+    width: 0;
+    left: 50%;
+}
+
+.nav-open .hamburger__line--3 {
+    transform: rotate(-45deg);
+    top: 20px;
+}
+
+/***************************************
+            下層ページ共通
+***************************************/
+section.top-img {
+    position: relative;
+    height: 30vh;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+section.top-img:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.55;
+    background-image: linear-gradient(75deg, transparent 50%, #fff 100%);
+}
+
+section.top-img .page-title {
+    position: absolute;
+    top: 15vh;
+    left: 0;
+    background: rgba(96, 56, 19, 0.8);
+    padding: 10px 25px 10px 60px;
+    color: #fff;
+    text-shadow: 2px 3px 2px #48290c;
+    z-index: 10;
+}
+
+section.top-img img {
+    height: 100%;
+    object-fit: cover;
+    -ms-filter: blur(2px);
+    filter: blur(2px);
+}
+
+/***************************************
+                診療案内
+***************************************/
+.treatment-animals .animal-name {
+    margin-top: 10px;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.treatment-animals .animal-img {
+    border: 2px solid;
+    border-radius: 8px;
+}
+
+.treatment-animals .animal-attention {
+    display: inline-block;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.treatment .treatment-img {
+    margin-bottom: 15px;
+}
+
+/***************************************
+                病院案内
+***************************************/
+.hospital-images {
+    margin-bottom: 10vh;
+}
+
+.hospital-images-inner .image-wrapper {
+    position: relative;
+    text-align: center;
+    height: 60vh;
+    min-height: 500px;
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.hospital-images-inner .image-wrapper img {}
+
+.hospital-images-inner .image-wrapper h3 {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    min-height: 20%;
+    margin-bottom: 0;
+    padding: 20px;
+    text-align: left;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.hospital-images-inner .slick-slide img {}
+
+.facility {
+    margin-bottom: 20px;
+}
+
+
+/***************************************
+                アクセス
+***************************************/
+.access-info .hospital-img {
+    max-height: 330px;
+    overflow: hidden;
+}
+
+.access-info .hospital-img img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.access-info h4 {
+    font-size: 1.2rem;
+}
+
+.access-info table {
+    width: 100%;
+}
+
+.access-info table tr {
+    border-bottom: solid 1px #b58868;
+}
+
+.access-info table tr:last-child {
+    border-bottom: none;
+}
+
+.access-info table th {
+    width: 30%;
+}
+
+.access-info table th,
+.access-info table td {
+    padding: 10px;
+}
+
+.access-time {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.access-time table {
+    table-layout: fixed;
+    width: 90%;
+    min-height: 105px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.access-time table td {
+    vertical-align: middle;
+}
+
+.access-time table tr:not(:last-child) {
+    border-bottom: 1px solid;
+}
+
+.access-time table tr > *:first-child {
+    border-right: 1px solid;
+}
+
+.access-time table tr th:first-child {
+    width: 25%;
+    padding: 5px 10px;
+    word-break: break-all;
+}
+
+.access-time table tr td i {
+    color: #b58868;
+}
+
+.access-info .map {
+    margin-top: 50px;
+}
+
+/***************************************
+****************************************
+                PC用CSS
+****************************************
+***************************************/
+@media screen and (min-width: 768px) {
+    .treatment .point-title {
+        width: 100%;
+        position: relative;
+        display: inline-block;
+        padding: 0 55px;
+    }
+
+    .treatment .point-title:before,
+    .treatment .point-title:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        display: inline-block;
+        width: 45px;
+        height: 1px;
+        background-color: #b58868;
+    }
+
+    .treatment .point-title:before {
+        left: 0;
+    }
+
+    .treatment .point-title:after {
+        right: 0;
+    }
+}
+
+
+/***************************************
+****************************************
+                SP用CSS
+****************************************
+***************************************/
+@media screen and (max-width: 767px) {
+
+/***************************************
+                共通
+***************************************/
+    body {
+        border-top: none;
+    }
+
+    main {
+        margin-top: 60px;
+    }
+
+    section {
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+    /** ヘッダー **/
+    header {
+        position: fixed;
+        top: 0;
+        margin-top: 0;
+        z-index: 999;
+        background-color: #fff;
+        width: 100%;
+        height: 60px;
+    }
+
+    header.fix-nav h1 {
+        width: inherit;
+    }
+
+    header h1 {
+        width: inherit;
+    }
+
+    .sp-logo-wrapper {
+        font-weight: bold;
+        align-self: stretch;
+        align-items: center;
+        margin-left: 10px;
+        margin-bottom: 0;
+        font-size: 22px;
+    }
+
+    .sp-logo-wrapper img {
+        height: 46px;
+        width: auto;
+        margin-right: .5rem;
+    }
+
+    .sp-logo-wrapper a {
+        color: #603913;
+    }
+
+    header .tel-btn {
+        width: 60px;
+        background-color: #ccc;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    header .tel-btn a {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background-color: #b58868;
+        color: #f4f1ed;
+    }
+
+    header .tel-btn a i {
+        font-size: 1.5rem;
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+
+    .top-btn a {
+        bottom: 20px;
+        right: 20px;
+        font-size: 11px;
+    }
+
+    h2.fancy {
+        margin-bottom: 15px;
+    }
+
+/***************************************
+        メインビジュアル(TOP)
+***************************************/
+    .top-slider {
+        position: relative;
+    }
+
+    .top-slider .row {
+        position: relative;
+    }
+
+    .top-slider .catch {
+        position: absolute;
+        width: 80%;
+        height: 100%;
+    }
+
+    .catch {
+        background-image: none;
+    }
+
+    .catch p {
+        background: rgba(255, 255, 255, .8);
+        padding: 10px;
+        height: initial;
+        top: inherit;
+        bottom: 0;
+        font-size: 16px;
+        writing-mode: inherit;
+    }
+
+    .top-slider .container {
+        max-width: none;
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+/***************************************
+            院長の想い(TOP)
+***************************************/
+    .doctor-outer .doctor-img {
+        padding-left: 0;
+        padding-right: 0;
+        height: 350px;
+        overflow: hidden;
+    }
+
+/***************************************
+            ポイント(TOP)
+***************************************/
+    .point-outer .row > div {
+        margin-bottom: 10px;
+    }
+
+    .point {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .point .point-img {
+        width: 50%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+    }
+
+    .point .point-description {
+        padding: 10px;
+        font-size: 80%;
+        min-height: 150px;
+    }
+
+/***************************************
+            SNS画像リスト(TOP)
+***************************************/
+    .sns-img-list {
+        margin-top: 20px;
+    }
+
+/***************************************
+            診療案内(TOP)
+***************************************/
+    .treatment .row > div {
+        margin-bottom: 10px;
+    }
+
+    .treatment .point {
+        padding: 10px;
+        min-height: 270px;
+    }
+
+    .treatment .point-img {
+        max-width: 130px;
+        max-height: 130px;
+    }
+
+/***************************************
+            アクセス(フッタ共通)
+***************************************/
+    .access-sec {
+        border-top: 4px solid #b58868;
+        border-bottom: 2px solid #b58868;
+    }
+
+    .access-sec .logo {
+        padding: 10%;
+    }
+
+    .access-sec .logo img {
+        max-width: 250px;
+    }
+
+    .access-sec .container {
+        padding-right: 0;
+        padding-left: 0;
+        max-width: none;
+    }
+
+    .access .hospital-info .time table {
+        font-size: 80%;
+    }
+
+    /***************************************
+                診療案内
+***************************************/
+    .animal-wrapper {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .treatment-animals .animal-img {
+        max-width: 170px;
+    }
+
+    /***************************************
+                病院案内
+***************************************/
+    .hospital-images-inner .image-wrapper {
+        height: inherit;
+        min-height: inherit;
+    }
+
+    /***************************************
+                アクセス
+***************************************/
+    .access-time {
+        padding: 20px 10px;
+        border-radius: 0;
+    }
+
+    .access-time table {
+        width: 95%;
+    }
+
+    section.top-img .page-title {
+        top: inherit;
+        bottom: 0;
+    }
+}

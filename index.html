@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>アニマル動物病院｜滋賀県南部のホームドクター</title>
+    <link rel="shortcut icon" href="img/icon.png">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha256-UK1EiopXIL+KVhfbFa8xrmAWPeBjMVdvYMYkTAEv/HI=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha256-4hqlsNP9KM6+2eA8VUT0kk4RsMRTeS7QGHIM+MZ5sLY=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha256-GqiEX9BuR1rv5zPU5Vs2qS/NSHl1BJyBcjQYJ6ycwD4=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css">
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer="defer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha256-NXRS8qVcmZ3dOv3LziwznUHPegFhPZ1F/4inU7uC8h0=" crossorigin="anonymous" defer="defer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha256-pQBbLkFHcP1cy0C8IhoSdxlm0CtcH5yJ2ki9jjgR03c=" crossorigin="anonymous" defer="defer"></script>
+    <script src="js/custom.js" defer="defer"></script>
+    <script src="js/api.js" defer="defer"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-inner container d-none d-md-block">
+            <div class="d-flex align-self-center">
+                <h1 class="d-flex mr-auto">
+                    <a href="index.html">
+                        <img class="logo-img" src="img/header_logo.png" alt="アニマル動物病院">
+                    </a>
+                </h1>
+                <div class="right-header">
+                    <ul class="header-info">
+                        <li class="d-inline-block">滋賀県大津市ほげほげ00-00</li>
+                        <li class="d-inline-block"><a class="head-fb-link" href="https://www.facebook.com/" target="blank" rel="noopener"><img class="fb-logo" src="img/fb_logo.png" alt="Facebook"></a></li>
+                        <li class="tel text-right"><a href="tel:000-000-0000"><img src="img/tel.png"></a></li>
+                    </ul>
+                    <nav class="gloval-nav">
+                        <ul class="d-flex justify-content-around">
+                            <li class="">
+                                <a href="index.html"><img src="img/nav_top.png"><!-- TOP--></a></li>
+                            <li class=""><a href="doctor.html"><img src="img/nav_doctor.png"><!-- 獣医師紹介 --></a></li>
+                            <li class=""><a href="treatment.html"><img src="img/nav_direction.png"><!-- 診療案内介 --></a></li>
+                            <li class=""><a href="hospital.html"><img src="img/nav_hospital.png"><!-- 病院案内 --></a></li>
+                            <li class=""><a href="access.html"><img src="img/nav_access.png"><!-- アクセス --></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex d-md-none">
+            <h1 class="sp-logo-wrapper d-flex align-self-center mr-auto">
+                <a href="index.html">
+                    <img src="img/icon.png" alt="アニマル動物病院">アニマル動物病院
+                </a>
+            </h1>
+            <nav class="global-nav">
+                <div class="hospital-info">
+                    <h2><a href="index.html"><img class="" src="img/header_logo.png" alt="アニマル動物病院">アニマル動物病院</a></h2>
+                    <h3 class="tel"><a href="tel:123-256-7890"><img src="img/tel.png"></a></h3>
+                </div>
+                <ul class="global-nav__list">
+                    <li class="global-nav__item"><a href="index.html"><i class="fas fa-paw"></i>TOP</a></li>
+                    <li class="global-nav__item"><a href="doctor.html"><i class="fas fa-paw"></i>獣医師紹介</a></li>
+                    <li class="global-nav__item"><a href="treatment.html"><i class="fas fa-paw"></i>診療案内</a></li>
+                    <li class="global-nav__item"><a href="hospital.html"><i class="fas fa-paw"></i>病院案内</a></li>
+                    <li class="global-nav__item"><a href="access.html"><i class="fas fa-paw"></i>アクセス</a></li>
+                </ul>
+            </nav>
+            <div class="tel-btn">
+                <a href="tel:123-256-7890"><i class="fas fa-phone"></i></a>
+            </div>
+            <div class="hamburger" id="js-hamburger">
+                <span class="hamburger__line hamburger__line--1"></span>
+                <span class="hamburger__line hamburger__line--2"></span>
+                <span class="hamburger__line hamburger__line--3"></span>
+            </div>
+            <div class="black-bg" id="js-black-bg"></div>
+        </div>
+    </header>
+    <main>
+        <section class="top-slider">
+            <div class="container">
+                <div class="row row-0">
+                    <div class="top-slider-container col-12 col-md-9">
+                        <div class="top-slider-wrapper">
+                            <div class="slide-obj">
+                                <img src="img/hospital_top.png" alt="内科">
+                            </div>
+                            <div class="slide-obj">
+                                <img src="img/top_01.jpg" alt="内科">
+                            </div>
+                            <div class="slide-obj">
+                                <img src="img/top_02.jpg" alt="内科">
+                            </div>
+                            <div class="slide-obj">
+                                <img src="img/top_03.jpg" alt="内科">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catch order-md-first col-12 col-md-3">
+                        <p>
+                            皆様の大切な家族の一員たちの健康を守る為、真摯に患者様と向き合ってまいります。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="doctor-outer" data-aos="fade-up">
+            <div class="container">
+                <div class="row row-10">
+                    <div class="doctor-img col-12 col-md-4 order-md-last">
+                        <img src="img/doctor_top.jpg" alt="院長の写真">
+                    </div>
+                    <div class="doctor-voice d-flex align-items-center col-12 col-md-8">
+                        <div>
+                            本サイトはLeekFooの制作サンプルとして作成した動物病院のサイトになります。<br>
+                            本サイトで使用している画像は下記サイト様の画像を使用させていただいております。<br>
+                            <ul class="image-by-link">
+                                <li><a href="https://www.pakutaso.com/" target="blank" rel="noopener">PAKUTASO</a></li>
+                                <li><a href="https://www.photo-ac.com/" target="blank" rel="noopener">写真AC</a></li>
+                                <li><a href="https://kage-design.com/" target="blank" rel="noopener">シルエットデザイン</a></li>
+                                <li><a href="https://www.flaticon.com/" target="blank" rel="noopener">Flaticon</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="point-outer" data-aos="fade-up">
+            <div class="container">
+                <div class="row row-10">
+                    <div class="col-12 col-md-3">
+                        <div class="point">
+                            <img class="point-img" src="img/point01.png" alt="駐車場2台分完備">
+                            <div class="point-description">
+                                <p class="point-text">駐車場を2台完備しています。<br>お車でも安心してお越しください。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3">
+                        <div class="point">
+                            <img class="point-img" src="img/point02.png" alt="カードの画像">
+                            <div class="point-description">
+                                <p class="point-text">土曜・日曜・祝日も変わらず診療をしています。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3">
+                        <div class="point">
+                            <img class="point-img" src="img/point_01.jpg" alt="カードの画像">
+                            <div class="point-description">
+                                <p class="point-text">各種ペット保険にも対応しています。<br>お気軽にお申し付けください。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3">
+                        <div class="point">
+                            <img class="point-img" src="img/point_04.jpg" alt="カードの画像">
+                            <div class="point-description">
+                                <p class="point-text">セカンドオピニオンも対応しておりますので、お気軽にお問い合わせください。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="treatment" data-aos="fade-up">
+            <div class="container">
+                <div class="row row-10">
+                    <div class="col-12 col-md-4">
+                        <div class="point">
+                            <img class="point-img" src="img/top_treatment01.png" alt="一般診療">
+                            <div class="point-description">
+                                <h5 class="point-title">一般診療</h5>
+                                <p class="point-text">一般診療として、予防接種、内科・外科・皮膚科などの病気を全般的に診させていただきます。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="point">
+                            <img class="point-img" src="img/top_treatment02.png" alt="高度医療">
+                            <div class="point-description">
+                                <h5 class="point-title">高度医療</h5>
+                                <p class="point-text">当院では高度診療を行われている病院への紹介や、転院される際のサポートも行っております。<br>お気軽にご相談ください。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="point">
+                            <img class="point-img" src="img/top_treatment03.png" alt="健康診断">
+                            <div class="point-description">
+                                <h5 class="point-title">健康診断</h5>
+                                <p class="point-text">ペットも医療技術の発達により、平均寿命が延びてきました。<br>ペットの健康と長寿の為にも定期的な健康診断による、病気の早期発見が大切です。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="info-sec" data-aos="fade-up">
+            <div class="container">
+                <div class="row">
+                    <div class="info-area col-12 col-md-6">
+                        <h3>お知らせ</h3>
+                        <ul>
+                            <li>
+                                <span class="d-block">
+                                    <span class="date">19/12/29</span>
+                                    <span class="info-title">年末年始の診察のお知らせ</span>
+                                </span>
+                                <span class="info-desc">
+                                    年末は12月28日(土)の午前にて診察終了します。<br>
+                                    <span class="text-danger">12月28日(土) 午後～1月5日(日)</span>の間は休診となります。<br>
+                                    ご迷惑をおかけ致しますが、よろしくお願い致します。
+                                </span>
+                            </li>
+                            <li>
+                                <span class="d-block">
+                                    <span class="date">19/12/29</span>
+                                    <span class="info-title">年末年始の診察のお知らせ</span>
+                                </span>
+                                <span class="info-desc">
+                                    年末は12月28日(土)の午前にて診察終了します。<br>
+                                    <span class="text-danger">12月28日(土) 午後～1月5日(日)</span>の間は休診となります。<br>
+                                    ご迷惑をおかけ致しますが、よろしくお願い致します。
+                                </span>
+                            </li>
+                            <li>
+                                <span class="d-block">
+                                    <span class="date">19/12/29</span>
+                                    <span class="info-title">年末年始の診察のお知らせ</span>
+                                </span>
+                                <span class="info-desc">
+                                    年末は12月28日(土)の午前にて診察終了します。<br>
+                                    <span class="text-danger">12月28日(土) 午後～1月5日(日)</span>の間は休診となります。<br>
+                                    ご迷惑をおかけ致しますが、よろしくお願い致します。
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sns-img-list col-12 col-md-6 order-md-first">
+                        <h3>院長日記</h3>
+                       <div class="row row-10">
+                            <!-- インスタやFBの投稿画像を取得し、表示 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="access-sec">
+            <div class="container">
+                <div class="row row-0">
+                    <div class="logo col-12 col-md-3">
+                        <img src="img/header_logo.png" alt="カードの画像">
+                    </div>
+                    <div class="access col-12 col-md-9">
+                        <div class="row row-0">
+                            <div class="hospital-info d-flex flex-column justify-content-center text-center col-12 col-md-7">
+                                <h2>アニマル動物病院</h2>
+                                <h3 class="tel"><a href="tel:000-000-0000"><img src="img/tel.png"></a></h3>
+                                <p>滋賀県大津市ほげほげ00-00</p>
+                                <div class="time">
+                                    <table class="">
+                                        <caption><small>木曜・日曜 午後は休診となります。</small></caption>
+                                        <tr>
+                                            <th>診療時間</th>
+                                            <th>月</th>
+                                            <th>火</th>
+                                            <th>水</th>
+                                            <th>木</th>
+                                            <th>金</th>
+                                            <th>土</th>
+                                            <th>日</th>
+                                        </tr>
+                                        <tr>
+                                            <th>9:00&nbsp;-&nbsp;12:00</th>
+                                            <td><i class="fas fa-paw"></i></td>
+                                            <td><i class="fas fa-paw"></i></td>
+                                            <td><i class="fas fa-paw"></i></td>
+                                            <td>-</td>
+                                            <td><i class="fas fa-paw"></i></td>
+                                            <td><i class="fas fa-paw"></i></td>
+                                            <td><i class="fas fa-paw"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <th>16:30&nbsp;-&nbsp;19:00</th>
+                                            <td><i class="fas fa-paw"></i></td>
+                                            <td><i class="fas fa-paw"></i></td>
+                                            <td><i class="fas fa-paw"></i></td>
+                                            <td>-</td>
+                                            <td><i class="fas fa-paw"></i></td>
+                                            <td><i class="fas fa-paw"></i></td>
+                                            <td>-</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="map col-12 col-md-5">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d834154.8785814442!2d135.54884293594972!3d35.24586797893874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60017f54840a177d%3A0x4412e436db7c88d0!2z5ruL6LOA55yM!5e0!3m2!1sja!2sjp!4v1584864046483!5m2!1sja!2sjp" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="text-center">
+        <small>&copy; 2020 LeekFoo All rights rserved.</small>
+    </footer>
+    <div class="top-btn text-center">
+        <a href="#">
+            <i class="fas fa-paw fa-2x"></i><br>PAGE TOP
+        </a>
+    </div>
+</body>
+
+</html>
